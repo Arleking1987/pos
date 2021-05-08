@@ -73,6 +73,10 @@ $.ajax({
     $("#EditarNombre").val(respuesta["nombre"]);
     $("#EditarUsuario").val(respuesta["usuario"]);
     $("#editarPerfil").html(respuesta["perfil"]);
+	$("#editarPerfil").val(respuesta["perfil"]);
+	$("#fotoActual").val(respuesta["foto"]);
+
+	$("#passwordActual").val(respuesta["password"]);
 
 	if (respuesta["foto"] != "") {
 
