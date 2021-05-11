@@ -324,7 +324,7 @@
               
                 <span class="input-group-addon"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="EditarUsuario" name="EditarUsuario" value="" required>
+                <input type="text" class="form-control input-lg" id="EditarUsuario" name="EditarUsuario" value="" readonly>
 
               </div>
 
@@ -356,7 +356,7 @@
 
                 <select class="form-control input-lg" name="EditarPerfil">
                   
-                  <option value="" id="editarPerfil"></option>
+                  <option value="" id="EditarPerfil"></option>
 
                   <option value="Administrador">Administrador</option>
 
@@ -402,12 +402,12 @@
 
       </div>
 
-      <!--<?php
+      <?php
 
-      $crearUsuario = new ControladorUsuarios();
-      $crearUsuario -> ctrCrearUsuario();
+      $editarUsuario = new ControladorUsuarios();
+      $editarUsuario -> ctrEditarUsuario();
 
-      ?>-->
+      ?>
 
       </form>
 
