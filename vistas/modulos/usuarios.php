@@ -83,12 +83,20 @@
 
                             }
 
-                
+                              echo '<td>'.$value["perfil"].'</td>';
 
+                             if ($value["estado"] != 0) {
 
-                              echo '<td>'.$value["perfil"].'</td>
-                              <td><button class="btn btn-success btn-xs">Activado</button></td>
-                              <td>'.$value["ultimo_login"].'</td>
+                               echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+
+                             }else {
+
+                               echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+
+                             }
+                              
+
+                             echo '<td>'.$value["ultimo_login"].'</td>
                               <td>
 
                                 <div class="btn-group">
@@ -338,7 +346,7 @@
               
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
 
-                <input type="password" class="form-control input-lg" name="EditarPassword" placeholder="Escriba la nueva contraseña" required>
+                <input type="password" class="form-control input-lg" name="EditarPassword" placeholder="Escriba la nueva contraseña">
 
                 <input type="hidden" id="passwordActual" name="passwordActual">
 
